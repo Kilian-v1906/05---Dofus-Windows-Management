@@ -1,0 +1,481 @@
+/* ==========================================================================
+   Gamer Red Theme - Dofus Organizer
+   Palette : Volcanic Charcoal (#140E10), Crimson Neon (#FF334B), Ruby (#E62E43)
+   Contrastes vérifiés WCAG : texte ultra-lisible, champs et formulaires nets
+   ========================================================================== */
+
+/* --- Base globale --- */
+QWidget {
+    background-color: #140E10;
+    color: #FFF0F2;
+    font-family: "Segoe UI", "Inter", "Roboto", "Cantarell", sans-serif;
+    font-size: 13px;
+    selection-background-color: #FF334B;
+    selection-color: #FFFFFF;
+}
+
+QDialog {
+    background-color: #1A1215;
+    border: 1px solid rgba(255, 51, 75, 0.22);
+    border-radius: 12px;
+}
+
+/* --- Typographie et Labels spéciaux --- */
+QLabel[muted="true"] {
+    color: rgba(255, 240, 242, 0.65);
+    font-size: 12px;
+}
+
+QLabel[pill="true"] {
+    background: rgba(255, 51, 75, 0.12);
+    border: 1px solid rgba(255, 51, 75, 0.35);
+    border-radius: 8px;
+    padding: 4px 10px;
+    font-weight: 600;
+    color: #FF4D63;
+}
+
+/* --- Boutons Généraux --- */
+QPushButton {
+    background: rgba(255, 255, 255, 0.06);
+    color: #FFF0F2;
+    border: 1px solid rgba(255, 51, 75, 0.20);
+    border-radius: 10px;
+    padding: 7px 14px;
+    font-weight: 600;
+}
+
+QPushButton:hover {
+    background: rgba(255, 51, 75, 0.15);
+    border-color: rgba(255, 51, 75, 0.60);
+    color: #FFFFFF;
+}
+
+QPushButton:pressed {
+    background: rgba(255, 51, 75, 0.30);
+    border-color: #FF334B;
+}
+
+QPushButton:disabled {
+    background: rgba(255, 255, 255, 0.02);
+    color: rgba(255, 240, 242, 0.30);
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+/* --- Boutons Néon (Action Principale & Succès) --- */
+QPushButton[neon="primary"] {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                                stop:0 rgba(255, 51, 75, 0.22),
+                                stop:1 rgba(230, 46, 67, 0.22));
+    border: 1px solid rgba(255, 51, 75, 0.70);
+    color: #FF4D63;
+}
+
+QPushButton[neon="primary"]:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                                stop:0 rgba(255, 51, 75, 0.40),
+                                stop:1 rgba(230, 46, 67, 0.40));
+    border-color: #FF334B;
+    color: #FFFFFF;
+}
+
+QPushButton[neon="success"] {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                                stop:0 rgba(0, 208, 132, 0.20),
+                                stop:1 rgba(255, 51, 75, 0.20));
+    border: 1px solid rgba(0, 208, 132, 0.70);
+    color: #00E676;
+}
+
+QPushButton[neon="success"]:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                                stop:0 rgba(0, 208, 132, 0.40),
+                                stop:1 rgba(255, 51, 75, 0.40));
+    border-color: #00E676;
+    color: #FFFFFF;
+}
+
+/* --- Bouton Paramètres --- */
+QPushButton#settingsIcon {
+    background: rgba(255, 51, 75, 0.08);
+    border: 1px solid rgba(255, 51, 75, 0.22);
+    border-radius: 18px;
+    padding: 6px;
+    color: #FF4D63;
+}
+
+QPushButton#settingsIcon:hover {
+    background: rgba(255, 51, 75, 0.20);
+    border-color: #FF334B;
+}
+
+/* --- ComboBox & Menus déroulants (Haut contraste garanti) --- */
+QComboBox {
+    background-color: #201317;
+    border: 1px solid rgba(255, 51, 75, 0.30);
+    border-radius: 10px;
+    padding: 6px 12px;
+    color: #FFF0F2;
+    font-weight: 500;
+}
+
+QComboBox:hover {
+    background-color: #2A181E;
+    border-color: #FF334B;
+}
+
+QComboBox:focus {
+    border: 1.5px solid #FF334B;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 24px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #201317;
+    border: 1px solid rgba(255, 51, 75, 0.40);
+    border-radius: 8px;
+    padding: 4px;
+    color: #FFF0F2;
+    selection-background-color: rgba(255, 51, 75, 0.25);
+    selection-color: #FF4D63;
+}
+
+/* --- SpinBox, Slider & Inputs (Contraste formulaire garanti) --- */
+QSpinBox, QLineEdit {
+    background-color: #201317;
+    border: 1px solid rgba(255, 51, 75, 0.30);
+    border-radius: 8px;
+    padding: 6px 10px;
+    color: #FFF0F2;
+}
+
+QSpinBox:focus, QLineEdit:focus {
+    border-color: #FF334B;
+    background-color: #2A181E;
+}
+
+QGroupBox {
+    border: 1px solid rgba(255, 51, 75, 0.22);
+    border-radius: 10px;
+    margin-top: 14px;
+    padding-top: 14px;
+    font-weight: 700;
+    color: #FF4D63;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    left: 12px;
+    padding: 0 4px;
+}
+
+QSlider::groove:horizontal {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 3px;
+}
+
+QSlider::sub-page:horizontal {
+    background: #FF334B;
+    border-radius: 3px;
+}
+
+QSlider::handle:horizontal {
+    background: #FFF0F2;
+    border: 2px solid #FF334B;
+    width: 16px;
+    margin-top: -5px;
+    margin-bottom: -5px;
+    border-radius: 8px;
+}
+
+/* --- Cartes des Personnages (Fenêtre principale) --- */
+QFrame#card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 51, 75, 0.18);
+    border-radius: 14px;
+}
+
+QFrame#card:hover {
+    background: rgba(255, 51, 75, 0.08);
+    border-color: rgba(255, 51, 75, 0.50);
+}
+
+QFrame#card QLabel,
+QFrame#card QWidget {
+    background: transparent;
+}
+
+/* --- Badges --- */
+QLabel#indexBadge {
+    background: rgba(255, 51, 75, 0.12);
+    border: 1px solid rgba(255, 51, 75, 0.40);
+    border-radius: 8px;
+    padding: 3px 8px;
+    color: #FF4D63;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+QLabel#hotkeyBadge {
+    background: rgba(255, 51, 75, 0.10);
+    border: 1px solid rgba(255, 51, 75, 0.30);
+    border-radius: 8px;
+    padding: 5px 12px;
+    font-weight: 700;
+    color: #FFF0F2;
+}
+
+QLabel#profileHotkeyBadge {
+    background: rgba(255, 51, 75, 0.12);
+    border: 1px solid rgba(255, 51, 75, 0.35);
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-weight: 600;
+    color: #FF4D63;
+}
+
+/* --- Interrupteur Switch (QCheckBox) --- */
+QCheckBox {
+    spacing: 8px;
+    color: #FFF0F2;
+}
+
+QCheckBox::indicator {
+    width: 38px;
+    height: 20px;
+}
+
+QCheckBox::indicator:unchecked {
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+QCheckBox::indicator:unchecked:hover {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+QCheckBox::indicator:checked {
+    border-radius: 10px;
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                                stop:0 #E62E43,
+                                stop:1 #FF334B);
+    border: 1px solid rgba(255, 51, 75, 0.80);
+}
+
+/* --- QListWidget & Scrollbars --- */
+QListWidget {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #FFF0F2;
+}
+
+QListWidget::item {
+    background: transparent;
+    border: none;
+    padding: 0px;
+}
+
+QListWidget::item:selected,
+QListWidget::item:hover {
+    background: transparent;
+}
+
+QPushButton#clearHotkeyBtn {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 51, 75, 0.25);
+    color: rgba(255, 240, 242, 0.75);
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 0px;
+}
+
+QPushButton#clearHotkeyBtn:hover {
+    background: rgba(255, 51, 75, 0.30);
+    border-color: #FF334B;
+    color: #FFFFFF;
+}
+
+QScrollBar:vertical {
+    background: transparent;
+    width: 8px;
+    margin: 4px 0;
+}
+
+QScrollBar::handle:vertical {
+    background: rgba(255, 51, 75, 0.25);
+    border-radius: 4px;
+    min-height: 24px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: rgba(255, 51, 75, 0.60);
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QFrame#panelCard {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 51, 75, 0.18);
+    border-radius: 12px;
+    padding: 8px;
+}
+
+QFrame#panelCard:hover {
+    background: rgba(255, 51, 75, 0.06);
+}
+
+QMenu {
+    background-color: #201317;
+    border: 1px solid rgba(255, 51, 75, 0.30);
+    border-radius: 8px;
+    padding: 6px 0px;
+}
+
+QMenu::item {
+    padding: 6px 20px;
+    color: #FFF0F2;
+}
+
+QMenu::item:selected {
+    background-color: rgba(255, 51, 75, 0.22);
+    color: #FF4D63;
+}
+
+/* ==========================================================================
+   MINI-MODE (Overlay HUD)
+   ========================================================================== */
+
+#miniRoot {
+    background-color: rgba(20, 14, 16, 0.95);
+    border: 1px solid rgba(255, 51, 75, 0.50);
+    border-radius: 12px;
+}
+
+QLabel#miniDrag {
+    color: rgba(255, 240, 242, 0.60);
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 2px;
+}
+
+QLabel#miniDrag:hover {
+    color: #FF4D63;
+}
+
+QFrame#miniCard {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 51, 75, 0.16);
+    border-radius: 8px;
+}
+
+QFrame#miniCard:hover {
+    background: rgba(255, 51, 75, 0.10);
+    border-color: rgba(255, 51, 75, 0.60);
+}
+
+QFrame#miniCard[active="true"] {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 rgba(255, 51, 75, 0.30),
+                                stop:1 rgba(230, 46, 67, 0.15));
+    border: 1.5px solid #FF334B;
+}
+
+QFrame#miniCard QLabel {
+    background: transparent;
+}
+
+QLabel#miniIndex {
+    background: rgba(255, 51, 75, 0.15);
+    border: 1px solid rgba(255, 51, 75, 0.40);
+    border-radius: 5px;
+    padding: 0px 4px;
+    color: #FF4D63;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+QLabel#miniIndex[active="true"] {
+    background: #FF334B;
+    border-color: #FF334B;
+    color: #140E10;
+    font-weight: 800;
+}
+
+QPushButton#miniHkBtn {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 51, 75, 0.25);
+    border-radius: 6px;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    color: #FF4D63;
+}
+
+QPushButton#miniHkBtn:hover {
+    background: rgba(255, 51, 75, 0.20);
+    border-color: #FF334B;
+    color: #FFFFFF;
+}
+
+QPushButton#miniPinBtn {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 51, 75, 0.20);
+    border-radius: 6px;
+    font-size: 11px;
+    padding: 0;
+    color: #FFF0F2;
+}
+
+QPushButton#miniPinBtn:hover {
+    background: rgba(255, 51, 75, 0.20);
+    border-color: #FF334B;
+}
+
+QPushButton#miniPinBtn:checked {
+    background: rgba(255, 51, 75, 0.30);
+    border-color: #FF334B;
+}
+
+QPushButton#miniCloseBare {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: rgba(255, 240, 242, 0.85);
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 0;
+}
+
+QPushButton#miniCloseBare:hover {
+    background: rgba(255, 51, 75, 0.35);
+    border-color: #FF334B;
+    color: #FFFFFF;
+}
+
+/* --- PiP Miniatures DWM & Hover Popup --- */
+QFrame#miniThumbBox {
+    background-color: #0D080A;
+    border: 1px solid rgba(255, 51, 75, 0.25);
+    border-radius: 6px;
+    margin-top: 2px;
+}
+
+QFrame#miniThumbBox:hover {
+    border-color: #FF334B;
+}
+
+QFrame#dwmHoverPopup {
+    background-color: rgba(20, 14, 16, 0.96);
+    border: 1.5px solid #FF334B;
+    border-radius: 10px;
+}

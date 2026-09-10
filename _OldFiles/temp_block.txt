@@ -1,0 +1,54 @@
+        card.setGraphicsEffect(sh)
+
+        row = QHBoxLayout(card)
+        row.setContentsMargins(8, 6, 8, 6)
+        row.setSpacing(8)
+
+        idx = QLabel(f"#{index+1}", objectName="miniIndex")
+        idx.setStyleSheet("")
+
+        icon = QLabel()
+        pm = QPixmap(icon_for_class(classe))
+        if not pm.isNull():
+            pm = pm.scaled(20, 20, Qt.KeepAspectRatio, Qt.SmoothTransformation)
+            icon.setPixmap(pm)
+        icon.setFixedSize(22, 22)
+        icon.setAlignment(Qt.AlignCenter)
+
+        name = QLabel(pseudo)
+        name.setStyleSheet("font-weight:600;")
+
+        self.chk = QCheckBox()
+        self.chk.setChecked(bool(enabled))
+        self.chk.stateChanged.connect(lambda s: self.toggled.emit(self.handle, bool(s)))
+
+        hk = QLabel(hotkey or "", objectName="miniHotkey")
+        hk.setStyleSheet("")
+        btn = QPushButton("Définir.")
+        btn.setFixedHeight(22)
+        btn.clicked.connect(lambda: self.request_define_hotkey.emit(self.handle, self.pseudo))
+
+        row.addWidget(idx)
+        row.addWidget(icon)
+        row.addWidget(name)
+        row.addWidget(self.chk)
+        row.addWidget(hk)
+        row.addWidget(btn)
+
+        wrap.addWidget(card)
+
+        card.mouseDoubleClickEvent = lambda e: self.request_focus.emit(self.handle)
+
+        self._idx_label = idx
+        self._hk_label = hk
+
+    def set_index(self, i: int):
+        self._idx_label.setText(f"#{i+1}")
+
+    def set_hotkey_text(self, txt: str):
+        self._hk_label.setText(txt or "")
+
+class MiniModeWindow(QWidget):
+    def __init__(self, parent_main: QWidget, windows: list[dict]):
+        super().__init__(parent_main)
+        self.main = parent_main

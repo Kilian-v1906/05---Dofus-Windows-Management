@@ -1,0 +1,6 @@
+PySide6
+pygetwindow
+pywin32
+psutil
+keyboard
+pyinstaller

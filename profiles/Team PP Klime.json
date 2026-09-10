@@ -1,0 +1,35 @@
+{
+    "profile_name": "Team PP Klime",
+    "windows": [
+        {
+            "pseudo": "Mara-Boutage",
+            "classe": "Pandawa",
+            "enabled": true
+        },
+        {
+            "pseudo": "Mara-Cas",
+            "classe": "Cra",
+            "enabled": true
+        },
+        {
+            "pseudo": "Mara-Chip",
+            "classe": "Iop",
+            "enabled": true
+        },
+        {
+            "pseudo": "Mara-Cuja",
+            "classe": "Sram",
+            "enabled": true
+        },
+        {
+            "pseudo": "Mara-Donna",
+            "classe": "Eniripsa",
+            "enabled": true
+        },
+        {
+            "pseudo": "Mara-Nao",
+            "classe": "Feca",
+            "enabled": true
+        }
+    ]
+}
